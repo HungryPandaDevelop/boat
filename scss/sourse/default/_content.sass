@@ -1,0 +1,102 @@
+
+$gridCount: 12
+$indent: 15px
+$maxWidth: 1280px
+$gap: 30px
+
+.main-grid
+	display: grid
+	grid-template-columns: repeat($gridCount, 1fr)
+	grid-column-gap: $gap
+	padding: 0 $indent
+	max-width: $maxWidth
+	margin: 0 auto
+
+.form-grid
+	display: grid
+	grid-template-columns: repeat($gridCount, 1fr)
+	grid-column-gap: $gap
+
+.catalog-grid
+	grid-gap: $gap
+
+.main-full
+	padding: 0 $indent
+	max-width: $maxWidth
+	margin: 0 auto
+
+section
+	padding: 45px 0 30px
+	position: relative
+	overflow: hidden
+
+.subtitle-section
+	font-size: $mediumSize
+	color: $greenColor
+	font-weight: 300
+	margin: 0
+
+.head-section
+	margin-bottom: 45px
+	text-align: center
+	h2
+		font-size: $hugeSize
+		margin: 0 0 15px
+		text-transform: uppercase
+
+.btn-container-section
+	padding: 30px 0 15px
+	text-align: center
+
+.breadcrumbs
+	font-size: $smallSize
+	padding: 15px 0 15px
+	color: $blackColor
+	border-bottom: 1px solid $blackColor
+	em
+		font-size: 0
+		margin-left: 5px
+		@include icoEl(20px, 20px, "../images/arrows/carret-right-gray.svg", middle, 130%)
+		vertical-align: middle
+	a
+		text-decoration: none
+		color: $blackColor
+		vertical-align: middle
+		&:hover
+			text-decoration: underline
+	span
+		vertical-align: middle
+		margin: 0 5px
+		&:first-child
+			margin-left: 0
+.content
+	position: relative
+	min-height: calc(100vh - 130px)
+	h1
+		padding: 30px 0 30px
+		color: $blackColor
+
+/*detail end*/
+/*detail end*/
+@media (max-width: 1024px)
+	section
+		padding: 45px 0 15px
+		.title-section
+			font-size: $largeSize
+@media (max-width: 576px)
+	.content h1
+		padding: 25px 0 15px
+		font-size: $mediumSize
+	section
+		.title-section
+			font-size: $largeSize
+			margin: 0 0 30px
+	.btn-container_section
+		.btn
+			margin: 0 0 15px
+	.breadcrumbs
+		padding: 15px 0 15px
+
+@media (max-width: 320px)
+	.main-grid
+		grid-column-gap: 0

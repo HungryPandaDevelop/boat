@@ -1,0 +1,119 @@
+.stub-footer
+  height: 180px
+footer
+  position: relative
+  overflow: hidden
+  background-color: $blackColor
+  padding: 60px 0 30px
+  color: $whiteColor
+  font-size: $smallSize
+  .logo-container
+    margin: 0 0 15px
+  .logo img
+    max-width: 110px
+    margin: 0 0 15px
+  .social
+    margin-top: 15px
+  .ico-box
+    display: inline-block
+  ul,
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+  nav
+    padding-top: 4px
+    h3
+      font-size: $mediumSize
+      color: inherit
+      font-weight: inherit
+      margin: 0 0 10px
+    a
+      text-decoration: none
+      &:hover
+        color: $yellowColor
+    .custom-disk li
+      &:before
+        background-color: $whiteColor
+      &:hover:before
+        background-color: $yellowColor
+    li
+      margin: 0 0 10px
+  .ico-box
+    margin-right: 15px
+  .nav-first,
+  .nav-second
+    text-align: right
+.mail-ico
+  @include icoEl(25px, 25px, "../images/icons/mail-white.svg")
+.marker-ico
+  @include icoEl(25px, 25px, "../images/icons/marker-white.svg")
+.phone-ico
+  @include icoEl(25px, 25px, "../images/icons/phone-white.svg")
+.feedback
+  .feedback-item
+    display: flex
+    margin: 0 0 15px
+    i
+      margin-right: 15px
+    i,span
+      margin-top: auto
+      margin-bottom: auto
+  .phone
+    font-weight: bold
+  a
+    text-decoration: none
+.footer-bottom
+  margin-top: 45px
+  font-size: $smallSize
+  display: flex
+  justify-content: space-between
+  a
+    font-size: inherit
+    text-decoration: underline
+    opacity: 0.6
+    &:hover
+      opacity: 1
+
+@media (max-width: 1024px)
+  footer
+    padding: 45px 0 30px
+    .feedback-item i
+      margin-right: 8px
+@media (max-width: 992px)
+  .footer-bottom-item
+    margin-bottom: 15px
+  footer
+    .btn
+      font-size: 14px
+      min-width: auto
+@media (max-width: 576px)
+  footer
+    .social
+      margin: 15px 0 30px
+    .nav-first
+      margin: 0 0 30px
+    .nav-second
+      margin: 0 0 45px
+    .ico-container
+      grid-row: 1
+    .map-site
+      grid-row: 2
+    .politics
+      grid-row: 3
+    .copyright
+      grid-row: 4
+    .ico-container a
+      margin-right: 30px
+    .footer-bottom
+      margin-top: 0
+    .feedback-container
+      .feedback
+        padding-top: 0px
+        margin: 0
+  .footer-bottom-item
+    margin: 0 0 15px
+  .stub-footer
+    height: 45px
+  .contacts-container
+    margin-bottom: 30px

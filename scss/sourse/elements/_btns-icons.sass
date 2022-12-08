@@ -1,0 +1,38 @@
+
+.close-btn
+	@include icoEl(45px, 45px, "../images/icons/close-black.svg")
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/close-orange.svg")
+
+.hamburger-btn
+	@include icoEl(30px, 30px, "../images/icons/hamburger-white.svg", middle, contain, center right)
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/hamburger-orange.svg")
+
+.btn-back
+	&:hover
+		color: $greenColor
+
+.whatsapp-btn
+	font-size: $smallSize
+	i,span
+		display: inline-block
+		vertical-align: middle
+	i
+		@include icoEl(24px, 24px, "../images/social/whatsapp-color.svg")
+		margin-right: 8px
+.phone-btn
+	i,span
+		display: inline-block
+		vertical-align: middle
+	i
+		@include icoEl(24px, 24px, "../images/icons/phone-blue.svg")
+		margin-right: 8px
+.liked-btn
+	@include icoEl(36px, 36px, "../images/icons/heart-white.svg", middle, 21px, center 10px)
+	background-color: $blueColor
+	border-radius: 100%
+	&:hover
+		background-color: $yellowColor

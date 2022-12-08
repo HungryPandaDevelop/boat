@@ -1,0 +1,44 @@
+section.selection-boad
+	.head-section.main-full
+		h2 Подобрать яхту
+	.main-grid
+		.col-4  
+			.selection-boad-item 
+				+inputSelect('ТИП СУДНА', ['селект 1','селект 2','селект 3','селект 4','селект 5',], 'boad-select')
+		.col-4  
+			.selection-boad-item 
+				h3 КОЛИЧЕСТВО КАЮТ
+				.range-slider-container.style-range-container
+					.slider-track
+					input(type="range" class="range" min="0" max="10" value="0")
+					.range-num 0
+		.col-4  
+			.selection-boad-item 
+				h3 ЦЕНА (AED/час)
+				.range-sliders-container.style-range-container
+					.slider-track
+					input(type="range" class="slider-1" min="0" max="100" value="30" name='a')
+					input(type="range" class="slider-2" min="0" max="100" value="70" name='b')
+					.range-num.range-num-1(data-name='a') 0
+					.range-num.range-num-2(data-name='b') 0
+		.col-4  
+			.selection-boad-item 
+				h3 ДЛИНА (м.)
+				.range-sliders-container.style-range-container
+					.slider-track
+					input(type="range" class="slider-1" min="0" max="60" value="10" name='c')
+					input(type="range" class="slider-2" min="0" max="60" value="22" name='d')
+					.range-num.range-num-1(data-name='c') 0
+					.range-num.range-num-2(data-name='d') 0
+		.col-4  
+			.selection-boad-item 
+				h3 ВМЕСТИМОСТЬ (чел.)
+				.range-sliders-container.style-range-container
+					.slider-track
+					input(type="range" class="slider-1" min="0" max="40" value="2" )
+					input(type="range" class="slider-2" min="0" max="40" value="20" )
+					.range-num.range-num-1 0
+					.range-num.range-num-2 0
+		.col-4  
+			.selection-boad-item 
+				.btn.btn--yellow Поиск яхт

@@ -1,0 +1,44 @@
+.faq-item
+  border: 1px solid $grayColorSecond
+  margin: 0 0 15px
+  padding: 0 30px 0
+  font-size: $smallSize
+  position: relative
+.faq-head
+  padding: 15px 0 0
+  display: flex
+  margin-bottom: -1px
+  h3
+    font-size: inherit
+    color: $greenColor
+    font-weight: 400
+    cursor: pointer
+    span
+      font-weight: 700
+    &:hover
+      color: $orangeColor
+  span
+    display: inline-block
+    margin: auto 0 auto auto
+  i
+    cursor: pointer
+    @include positionElement(30px, 30px, 0, 0 , right)
+    @include bgImageEl("../images/arrows/carret-down-black.svg", contain)
+
+.faq-content
+  position: relative
+  overflow: hidden
+  padding-top: 15px
+  max-height: 0
+  // text-align: justify
+  transition: ease-out 0.5s
+.faq-item--active
+  background-color: $blackColor
+  color: $whiteColor
+  h3
+    color: $yellowColor
+  i
+    background-image: url("../images/arrows/carret-up-white.svg")
+  .faq-content
+    max-height: 700px
+    padding-bottom: 15px

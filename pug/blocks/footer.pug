@@ -1,0 +1,43 @@
+footer
+	.main-grid
+		.logo-container.col-3.col-sm-5.col-xs-12
+			a.logo(href="./index.html")
+				img(src="/images/logo.jpg")
+			.logo-text Cовременная компания
+			+social(["vw","tlw","okw","wzw"])
+		.feedback.col-4.col-sm-5.col-xs-12
+			.phone.feedback-item
+				a(href="#") 
+					.ico-box.phone-ico
+					span + 7 (985) 282 - 65 - 32
+			.address.feedback-item
+				.ico-box.marker-ico
+				span 109475, г. Москва,
+					br
+					|ул. Малахова, 177Е, офис 711
+			.mail.feedback-item
+				a(href="#")
+					.ico-box.mail-ico
+					span mail@mail.ru
+			.btn-container 
+				a.btn.btn--orange.btn-element(href="#").element-btn(data-element="1")
+					span Обратная связь
+					i
+		nav.col-3.col-sm-5.col-xs-12.nav-first
+			h3 Каталог
+			ul
+				each val in ["Реанимация и анестезиология","Ренгенология","Функциональная диагностика","Дезинфекция","Стерилизация","Физиотерапия","Медицинский транспорт"]
+					li  
+						a(href="#") 
+							= val
+		nav.col-2.col-sm-5.col-xs-12.nav-second
+			ul
+				each val in ["О  компании","Документы и оплата","Контакты","Вопросы и ответы","Новости и События"]
+					li  
+						a(href="#") 
+							= val
+		.col-12.footer-bottom
+			span © ООО «PANDA»
+			a(href="#") Карта сайта 
+			a(href="#") Пользовательское соглашение
+			a(href="#") Политика конфиденциальности

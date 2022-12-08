@@ -1,0 +1,11 @@
+section.feedback-home
+	.main-grid
+		.col-6.col-md-12
+			h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, et perspiciatis. Voluptate ex amet et ipsam ut nihil maiores architecto iste dolorum. Consequuntur, sit! Ea recusandae neque ut expedita et!
+		.col-6.col-md-12.form-default
+			+inputText('Ваше имя','form-line')
+			+inputEmail('Ваш Email','form-line')
+			+inputPhone('Ваш телефон','form-line')
+			+inputCheckbox(false,['Я даю свое согласие на обработку персональных данных'])
+			+inputSubmit('Отправить', 'btn--green')

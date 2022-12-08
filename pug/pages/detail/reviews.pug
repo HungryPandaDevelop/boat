@@ -1,0 +1,22 @@
+section.reviews-detail
+  .main-grid
+    .col-6
+      h2 Отзывы
+      .reviews-list
+        +reviewsItem("Alex But","10/10/10") 
+        +reviewsItem("Nanci Dri","12/12/22") 
+    .col-6
+      h2 Оценка:
+      .reviews-form.form-default
+        .reviews-stars
+          .reviews-container
+            i.star-ico.star-ico--gray
+            i.star-ico.star-ico--gray
+            i.star-ico.star-ico--gray
+            i.star-ico.star-ico--gray
+            i.star-ico.star-ico--gray
+        +inputText('Ваше имя','form-line')
+        +inputEmail('Ваш Email','form-line')
+        +inputPhone('Ваш телефон','form-line')
+        +inputCheckbox(false,['Я даю свое согласие на обработку персональных данных'])
+        +inputSubmit('Отправить', 'btn--green')

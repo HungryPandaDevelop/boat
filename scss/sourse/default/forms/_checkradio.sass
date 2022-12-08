@@ -1,0 +1,41 @@
+/*-checkbox-start-*/
+
+.checkbox,
+.radio
+	display: inline-block
+	position: relative
+	padding: 5px
+	padding-left: 35px
+	cursor: pointer
+	user-select: none
+	vertical-align: top
+	margin-right: 15px
+	label
+		cursor: pointer
+	&:last-child
+		margin-right: 0
+	input
+		@include positionElement(95%, 100%)
+		opacity: 0
+
+		&:checked~span
+			box-shadow: $shadowFour
+			&:after
+				display: block
+
+	span
+		@include positionElement(21px, 21px, 0px, 5px)
+		border: 2px solid $whiteColor
+		box-shadow: rgb(38 57 77 / 30%) 0px 5px 10px 1px
+		border-radius: 4px
+		background-color: $orangeColor
+		transition: ease-out 0.5s
+		cursor: pointer
+		&:after
+			content: ""
+			@include positionElement(80%, 80%, 10%,10%)
+			@include bgImageEl("../images/icons/ok-white.svg")
+
+			display: none
+
+/*-checkbox-wp-*/
