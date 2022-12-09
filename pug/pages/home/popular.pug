@@ -1,0 +1,11 @@
+section.popular-home
+	.main-full
+		.head-section
+			h2.title-section 
+				| Популярные яхты
+			.btn-container
+				a(href="#").btn.btn--blue Смотреть все яхты 
+			.stab-arrow
+	.main-full.owl-popular.owl-carousel
+		-for(var x = 0; x < 7; x++)
+			+popularItem("Аренда Azimut 62 Lucky Star","850 AED/час")

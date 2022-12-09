@@ -7,6 +7,23 @@ owlMain.owlCarousel({
   margin: 30
 });
 
+let owlPopularItemImg = $('.popular-item-img-owl');
+
+owlPopularItemImg.owlCarousel({
+  items: 1,
+  nav: false,
+  dots: true,
+});
+
+let owlPopular = $('.owl-popular');
+
+owlPopular.owlCarousel({
+  items: 3,
+  nav: true,
+  dots: true,
+  margin: 30
+});
+
 let owlDetailMain = $('.owl-detail-main');
 
 owlDetailMain.owlCarousel({

@@ -1,0 +1,9 @@
+mixin servicesItem(name, price, img)
+	.services-item
+		a(href="#").services-item-img
+			.img-cover
+				img(src=img, alt="")
+			.services-item-info
+				h3
+					= name
+				.services-item-price=price 

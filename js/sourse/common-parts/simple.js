@@ -85,6 +85,12 @@ $('.range-sliders-container').each(function(){
 
 
 
-
+  $('.warning-show').on('click',function(e){
+    e.preventDefault();
+    $(this).parents('.warning-item').addClass('active');
+  }); 
+  $('.warning-close').on('click',function(){
+    $(this).parents('.warning-item').removeClass('active');
+  }); 
 
 })

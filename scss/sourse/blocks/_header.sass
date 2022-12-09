@@ -15,10 +15,8 @@ header
 		&:hover
 			color: $yellowColor
 	.btn
-		font-size: $microSize
-		text-transform: uppercase
-		// padding: 3px 15px
-		min-width: auto
+		// width: 150px
+		padding: 9px 5px
 .border-header
 	@include positionElement(100%, 1px, 0,0,left, bottom)
 	background-color: $grayColorSecond
@@ -57,7 +55,7 @@ header
 			opacity: 0
 			visibility: hidden
 			li
-				border-bottom: 1px solid $grayColorThree
+				border-bottom: 1px solid $grayColorSecond
 				&:last-child
 					border: 0
 			a
@@ -88,12 +86,17 @@ header
 .logo
 	position: relative
 	display: flex
+
 	a
 		margin: auto 0
 
 	img
+		transition: ease-out 0.25s
 		width: 100%
-
+.stick
+	.logo
+		img
+			width: 135px
 .feedback-header
 	margin-left: auto
 	a

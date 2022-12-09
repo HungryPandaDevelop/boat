@@ -1,0 +1,45 @@
+.services-home
+  padding-bottom: 0
+  .main-grid
+    max-width: none
+    padding: 0
+    gap: 0
+.services-item
+  background-color: $blueColor
+  a
+    text-decoration: none
+  h3
+    font-size: $largeSize
+    text-transform: uppercase
+    color: $whiteColor
+
+  .services-item-price
+    display: inline-block
+    font-size: $smallSize
+    background-color: $whiteColor
+    padding: 3px 30px
+    color: $blueColor
+    border-radius: 15px
+    text-transform: uppercase
+    font-weight: 600
+.services-item-info
+  padding: 30px 30px 50px
+  position: relative
+  margin-top: auto
+
+.services-item-img
+  height: 414px
+  display: flex
+  position: relative
+  overflow: hidden
+  .img-cover
+    @include positionElement(100%,100%,0,0)
+    transform: scale(1)
+    transition: ease-out 0.5s
+    opacity: 0.8
+  img
+    @include positionElement(100%,100%,0,0)
+  &:hover
+    .img-cover
+      transform: scale(1.1)
+      opacity: 0.9

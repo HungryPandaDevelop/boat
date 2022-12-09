@@ -1,0 +1,155 @@
+.popular-home
+  .title-section
+    text-align: left
+    margin: 0
+  .head-section
+    display: flex
+    .btn
+      width: 270px
+    .btn-container
+      margin: auto
+      margin-right: 0
+    .stab-arrow
+      width: 140px
+.owl-popular
+  padding-bottom: 60px
+  .owl-nav
+    width: 110px
+    top: -84px
+    left: auto
+    right: 0
+  .owl-prev, .owl-next
+    border-color: $grayColor
+    border-radius: 100%
+    width: 48px
+    height: 48px
+    margin: 0
+  .owl-prev
+    background-image: url("../images/arrows/carret-left-gray.svg")
+    &:hover
+      background-color: $yellowColor
+      background-image: url("../images/arrows/carret-left-white.svg")
+      border-color: $yellowColor
+  .owl-next
+    background-image: url("../images/arrows/carret-right-gray.svg")
+    &:hover
+      background-color: $yellowColor
+      background-image: url("../images/arrows/carret-right-white.svg")
+      border-color: $yellowColor
+  .owl-dots
+    bottom: 0
+  .owl-dot
+    border: 2px solid rgba($yellowColor, 0)
+    width: 27px
+    height: 27px
+    transition: ease-out 0.5s
+    &::after
+      width: 5px
+      height: 5px
+      background-color: $grayColor
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+    &.active,
+    &:hover
+      border-color: rgba($yellowColor, 1)
+      &::after
+        background-color: $yellowColor
+.popular-item
+  background-color: $whiteColor
+  border: 1px solid $grayColorSecond
+  a
+    text-decoration: none
+
+  h3
+    font-size: $largeSize
+    font-weight: 700
+    margin: 0 0 13px
+    a
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      line-clamp: 2
+      position: relative
+      overflow: hidden
+      &:hover
+        color: $yellowColor
+  .owl-dots
+    bottom: 30px
+.popular-item-info
+  padding: 20px
+
+.popular-item-price
+  font-size: $largeSize
+  font-weight: 700
+  color: $yellowColor
+.popular-item-img
+  width: 100%
+  height: 320px
+  display: block
+  position: relative
+  .popular-img
+    @include positionElement(100%,100%,0,0)
+    transition: ease-out 0.5s
+    &:hover
+      transform: scale(1.1)
+
+.popular-item-img-owl
+  height: 100%
+  .owl-dot
+    border-radius: 4px
+    width: 40px
+    height: 4px
+    background-color: rgba($whiteColor, 0.9)
+    &::after
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      border-radius: 4px
+    &.active::after,
+    &:hover::after
+      background-color: $blueColor
+.popular-logo
+  @include positionElement(100px, 70px,0,0)
+  z-index: 2
+  @include bgImageEl("../images/popular-logo.svg")
+  margin: 15px
+  span
+    position: absolute
+    width: 100%
+    bottom: 9px
+    text-align: center
+    color: $whiteColor
+    font-size: $smallSize
+.popular-item-liked
+  @include positionElement(20px,20px,0,0,right)
+  cursor: pointer
+  margin: 15px
+  @include bgImageEl("../images/icons/heart-blue.svg")
+  &.active,
+  &:hover
+    background-image: url("../images/icons/heart-yellow.svg")
+
+.popular-adv
+  display: flex
+  justify-content: space-between
+  border-top: 1px solid $grayColorSecond
+  padding-top: 15px
+  margin-top: 15px
+  margin-bottom: 15px
+.popular-adv-icons
+  text-align: center
+  font-size: $smallSize
+  img
+    width: 36px
+    height: 36px
+  span
+    display: block
+
+.btn-popular-container
+  display: flex
+  justify-content: space-between
+  gap: 30px
+  .btn
+    width: 100%
