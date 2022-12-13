@@ -19,22 +19,18 @@
 		opacity: 0
 
 		&:checked~span
-			box-shadow: $shadowFour
 			&:after
 				display: block
 
 	span
 		@include positionElement(21px, 21px, 0px, 5px)
-		border: 2px solid $whiteColor
-		box-shadow: rgb(38 57 77 / 30%) 0px 5px 10px 1px
-		border-radius: 4px
-		background-color: $orangeColor
+		background-color: $yellowColor
 		transition: ease-out 0.5s
 		cursor: pointer
 		&:after
 			content: ""
 			@include positionElement(80%, 80%, 10%,10%)
-			@include bgImageEl("../images/icons/ok-white.svg")
+			@include bgImageEl("../images/icons/agree-black.svg")
 
 			display: none
 

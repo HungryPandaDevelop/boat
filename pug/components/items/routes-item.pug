@@ -1,0 +1,18 @@
+mixin routesItem(name, route, time, img)
+	.routes-item
+		a(href="#").routes-item-img
+			.img-cover
+				img(src=img, alt="")
+		.routes-item-info
+			.routes-item-about
+				.routes-item-name 
+					=route
+				.routes-item-time
+					i
+					span 
+						=time
+			h3
+				a(href="#") 
+					= name
+			.routes-item-text
+				| Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore deserunt id. Repudiandae, consequuntur. Harum, quia ullam, possimus blanditiis qui quidem laborum natus amet accusamus odit laudantium. Amet, consequuntur ipsa! 
