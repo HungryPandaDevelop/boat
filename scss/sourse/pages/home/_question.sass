@@ -1,0 +1,49 @@
+.question-home-tabs
+  color: $blueColor
+  text-transform: uppercase
+  font-size: $microSize
+  width: 500px
+  margin: 0 auto 60px
+  display: flex
+  text-align: center
+  border: 1px solid $grayColorSecond
+  border-radius: 60px
+  font-weight: 700
+  cursor: pointer
+  position: relative
+  overflow: hidden
+
+  em
+    font-style: normal
+    display: inline-block
+    margin: auto
+  span
+    display: inline-flex
+    padding: 15px 30px
+    width: 50%
+    height: 66px
+
+    margin: auto 0
+    &.active,
+    &:hover
+      color: $whiteColor
+      background-color: $yellowColor
+.question-home-item
+  display: none
+  img
+    width: 100%
+    margin: 0 0 30px
+  p
+    margin: 0 0 15px
+  h2
+    font-size: $hugeSize
+    color: $yellowColor
+    margin: 0 0 30px
+    text-transform: uppercase
+  h3
+    font-size: 28px
+    text-transform: uppercase
+    color: $grayColor
+    margin: 0 0 15px
+  &.active
+    display: block

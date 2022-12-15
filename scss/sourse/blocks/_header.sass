@@ -20,14 +20,19 @@ header
 .border-header
 	@include positionElement(100%, 1px, 0,0,left, bottom)
 	background-color: $grayColorSecond
-.search-header
-	width: 340px
+.search-main
+	width: 300px
 	position: relative
+
 	input
 		font-size: $smallSize
+		background-color: $grayColorSecond
+		border-radius: 30px
+		text-transform: initial
+		font-weight: 700
 	.search-ico
 		@include positionElement(21px, 21px, 0, 0, right)
-		margin: 12px 15px
+		margin: 10px 13px
 		@include bgImageEl("../images/icons/loop-gray.svg")
 .line-top-container
 	height: 70px

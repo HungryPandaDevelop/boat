@@ -1,61 +1,4 @@
-.popular-home
-  .title-section
-    text-align: left
-    margin: 0
-  .head-section
-    display: flex
-    .btn
-      width: 270px
-    .btn-container
-      margin: auto
-      margin-right: 0
-    .stab-arrow
-      width: 140px
-.owl-popular
-  padding-bottom: 60px
-  .owl-nav
-    width: 110px
-    top: -84px
-    left: auto
-    right: 0
-  .owl-prev, .owl-next
-    border-color: $grayColor
-    border-radius: 100%
-    width: 48px
-    height: 48px
-    margin: 0
-  .owl-prev
-    background-image: url("../images/arrows/carret-left-gray.svg")
-    &:hover
-      background-color: $yellowColor
-      background-image: url("../images/arrows/carret-left-white.svg")
-      border-color: $yellowColor
-  .owl-next
-    background-image: url("../images/arrows/carret-right-gray.svg")
-    &:hover
-      background-color: $yellowColor
-      background-image: url("../images/arrows/carret-right-white.svg")
-      border-color: $yellowColor
-  .owl-dots
-    bottom: 0
-  .owl-dot
-    border: 2px solid rgba($yellowColor, 0)
-    width: 27px
-    height: 27px
-    transition: ease-out 0.5s
-    &::after
-      width: 5px
-      height: 5px
-      background-color: $grayColor
-      top: 50%
-      left: 50%
-      transform: translateX(-50%) translateY(-50%)
-    &.active,
-    &:hover
-      border-color: rgba($yellowColor, 1)
-      &::after
-        background-color: $yellowColor
-.popular-item
+.yachts-item
   background-color: $whiteColor
   border: 1px solid $grayColorSecond
   a
@@ -74,27 +17,29 @@
       overflow: hidden
       &:hover
         color: $yellowColor
+  .owl-carousel
+    padding-bottom: 0px
   .owl-dots
     bottom: 30px
-.popular-item-info
+.yachts-item-info
   padding: 20px
 
-.popular-item-price
+.yachts-item-price
   font-size: $largeSize
   font-weight: 700
   color: $yellowColor
-.popular-item-img
+.yachts-item-img
   width: 100%
   height: 320px
   display: block
   position: relative
-  .popular-img
+  .yachts-img
     @include positionElement(100%,100%,0,0)
     transition: ease-out 0.5s
     &:hover
       transform: scale(1.1)
 
-.popular-item-img-owl
+.yachts-item-img-owl
   height: 100%
   .owl-dot
     border-radius: 4px
@@ -110,7 +55,8 @@
     &.active::after,
     &:hover::after
       background-color: $blueColor
-.popular-logo
+
+.yachts-logo
   @include positionElement(100px, 70px,0,0)
   z-index: 2
   @include bgImageEl("../images/popular-logo.svg")
@@ -122,7 +68,7 @@
     text-align: center
     color: $whiteColor
     font-size: $smallSize
-.popular-item-liked
+.yachts-item-liked
   @include positionElement(20px,20px,0,0,right)
   cursor: pointer
   margin: 15px
@@ -131,14 +77,14 @@
   &:hover
     background-image: url("../images/icons/heart-yellow.svg")
 
-.popular-adv
+.yachts-adv
   display: flex
   justify-content: space-between
   border-top: 1px solid $grayColorSecond
   padding-top: 15px
   margin-top: 15px
   margin-bottom: 15px
-.popular-adv-icons
+.yachts-adv-icons
   text-align: center
   font-size: $smallSize
   img
@@ -147,7 +93,7 @@
   span
     display: block
 
-.btn-popular-container
+.btn-yachts-container
   display: flex
   justify-content: space-between
   gap: 30px

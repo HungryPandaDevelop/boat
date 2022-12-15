@@ -1,0 +1,38 @@
+.about-home
+  height: 705px
+  font-size: $largeSize
+  font-weight: 700
+  padding-top: 0
+  padding-bottom: 45px
+  .img-cover
+    height: 100%
+  h2
+    text-transform: uppercase
+    font-size: $hugeSize
+    margin: 0 0 30px
+  .arrow-stub
+    height: 140px
+  .owl-nav
+    width: 110px
+    top: calc(100% - 100px)
+    left: calc(50% + 90px)
+
+.about-carousel,
+.about-home-item
+  height: 100%
+  display: flex
+.about-home-img,
+.about-home-description
+  width: 50%
+  height: 100%
+.about-home-container
+  max-width: 430px
+  margin: auto 90px
+.about-home-description
+  display: flex
+.about-home-img
+  position: relative
+.about-home-logo
+  @include positionElement(280px, 320px,50%,50%)
+  transform: translateX(-50%) translateY(-50%)
+  @include bgImageEl("../images/logo-about.svg")

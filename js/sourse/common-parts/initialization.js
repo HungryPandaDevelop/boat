@@ -7,22 +7,32 @@ owlMain.owlCarousel({
   margin: 30
 });
 
-let owlPopularItemImg = $('.popular-item-img-owl');
+let owlAbout = $('.about-carousel');
 
-owlPopularItemImg.owlCarousel({
+owlAbout.owlCarousel({
+  items: 1,
+  nav: true,
+  dots: false,
+});
+
+let owlYachtsItemImg = $('.yachts-item-img-owl');
+
+owlYachtsItemImg.owlCarousel({
   items: 1,
   nav: false,
   dots: true,
 });
 
-let owlPopular = $('.owl-popular');
+let owlSecond = $('.owl-second');
 
-owlPopular.owlCarousel({
+owlSecond.owlCarousel({
   items: 3,
   nav: true,
   dots: true,
   margin: 30
 });
+
+
 
 let owlDetailMain = $('.owl-detail-main');
 
@@ -81,9 +91,9 @@ let owlPartners = $('.owl-partners');
 
 owlPartners.owlCarousel({
   dots:  false,
-  autoplay: true,
-  autoplayTimeout: 1001,
-  smartSpeed: 500,
+  // autoplay: true,
+  // autoplayTimeout: 1001,
+  // smartSpeed: 500,
   loop: true,
   responsive:{
     0:{
@@ -93,7 +103,7 @@ owlPartners.owlCarousel({
       items: 4,
     },
     992:{
-      items: 7,
+      items: 5,
     }
 }
 });

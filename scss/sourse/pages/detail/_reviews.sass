@@ -1,18 +1,3 @@
-.detail-bottom
-  padding: 45px 0 30px
-  .social-container
-    width: 100%
-    text-align: right
-    h3
-      color: $greenColor
-      margin: 0 0 5px
-      font-size: inherit
-      font-weight: 500
-.recent-items
-  h2
-    font-size: $mediumSize
-    margin: 0 0 30px
-
 .reviews-detail
   margin-top: 45px
   .main-grid
@@ -23,79 +8,40 @@
     margin: 0 0 30px
   .form-btn-container
     text-align: right
-.reviews-list
-  .navigation
-    display: flex
-    justify-content: space-between
-    a
-      text-decoration: none
-      &:hover
-        color: $greenColor
+
+    font-size: $smallSize
 .reviews-item
-  padding: 15px
-  margin-bottom: 30px
-  background-color: $whiteColor
-  max-width: 930px
-  box-shadow: $shadowFive
-  border-radius: 8px
+
   h2
     font-size: $standartSize
-    color: $greenColor
+    color: $blueColor
     margin: 0
-  h3
-    font-size: inherit
-    font-size: $smallSize
-    font-weight: 400
-  .reviews-name
+    text-transform: uppercase
     display: inline-block
-    text-align: left
     vertical-align: middle
-  .reviews-text
-    font-size: $smallSize
-.reviews-info
+.reviews-text
+  background-color: $whiteColor
+  padding: 45px 15px
+  font-weight: 600
+  color: $blueColor
   text-align: center
+  margin: 0 0 30px
+  border-radius: 15px
+  position: relative
+  &::after
+    content: ""
+    @include positionElement(20px,20px,22px,calc(100% - 11px))
+    background-color: $whiteColor
+    transform: rotate(45deg)
+.reviews-info
 
 .reviews-img
-  width: 102px
-  height: 102px
+  width: 62px
+  height: 62px
   border-radius: 100%
-  border: 1px solid $grayColorSecond
   overflow: hidden
   position: relative
   display: inline-block
-  margin-right: 30px
+  margin-right: 15px
   vertical-align: top
-  margin: 0 0 15px
   vertical-align: middle
-.reviews-item--extra
-  .reviews-img
-    margin-right: 15px
-  .reviews-text
-    color: $greenColor
-    margin: auto 0
-    font-size: $standartSize
-  .reviews-body
-    display: flex
-    width: 100%
-.reviews-audio
-  text-align: center
-  margin-top: 15px
-.reviews-stars
-  margin: 0 0 15px
-  text-align: right
-.star-ico
-  display: inline-block
-  @include icoEl(24px, 24px, '../images/icons/star-black.svg')
-  cursor: pointer
-
-.star-ico.active,
-.star-ico:hover
-  background-image: url("../images/icons/star-fill-black.svg")
-
-.input-stars
-  position: absolute
-  opacity: 0
-  left: 0
-@media print
-  .reviews-detail
-    padding: 0 15px

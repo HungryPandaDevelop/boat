@@ -1,12 +1,12 @@
-.news-item
+.blog-item
   background-color: $whiteColor
   a
     text-decoration: none
-    &:hover
-      color: $greenColor
+
   h3
-    font-size: $mediumSize
-    font-weight: 400
+    font-size: $largeSize
+    font-weight: 500
+    margin: 0 0 15px
     a
       display: -webkit-box
       -webkit-line-clamp: 2
@@ -14,19 +14,21 @@
       line-clamp: 2
       position: relative
       overflow: hidden
+      &:hover
+        color: $yellowColor
+.blog-item-info
+  padding: 30px 15px
+  border: 1px solid $grayColorSecond
 
-.news-item-info
-  padding: 30px
-
-.news-item-text
+.blog-item-text
   overflow: hidden
   display: -webkit-box
   -webkit-line-clamp: 2
   -webkit-box-orient: vertical
-  line-clamp: 2
+  line-clamp: 3
   margin: 0 0 15px
   font-size: $smallSize
-.news-item-img
+.blog-item-img
   height: 250px
   display: block
   position: relative
@@ -40,17 +42,9 @@
   &:hover
     .img-cover
       transform: scale(1.1)
-.news-item-date
+.blog-item-date
   font-size: $smallSize
-  color: $grayColor
-  margin: auto 0
-
-@media (max-width: 1620px)
-  .news-item h3
-    font-size: 20px
-@media (max-width: 1280px)
-  .news-item-info
-    padding: 15px 15px
-@media (max-width: 576px)
-  .news-item-info
-    height: auto
+  text-transform: uppercase
+  color: $yellowColor
+  margin: 0 0 15px
+  font-weight: 600
