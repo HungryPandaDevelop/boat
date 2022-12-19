@@ -44,35 +44,3 @@
       padding: 18px 15px
       &:hover
         background-color: rgba($grayColorSecond , 0.2)
-
-/* range-sliders */
-.style-range-container
-  position: relative
-  height: 20px
-  margin: 20px 0 0
-  .slider-track
-    @include positionElement(100%,1px,0,50%)
-    background-color: $whiteColor
-  .range-num
-    @include positionElement(20px,20px,0,28px)
-    text-align: center
-    font-weight: 600
-    font-size: $smallSize
-  input[type="range"]
-    appearance: none
-    width: 100%
-    margin: 0
-    outline: none
-    background: none
-    pointer-events: none
-    position: absolute
-  input[type="range"]::-webkit-slider-thumb
-    appearance: none
-    background-color: $blueColor
-    border: 1px solid $whiteColor
-    width: 20px
-    height: 20px
-    border-radius: 100%
-    cursor: pointer
-    pointer-events: auto
-/* range-sliders */

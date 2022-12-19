@@ -13,15 +13,15 @@ mixin inputTextarea(placeholder, className)
 mixin inputCheckbox(label, options, className ) 
 	if label
 		.checkbox-container
-			b=label
-	each val in options
+			h3=label
+	each val in options 
 		.checkbox(class=className)
 			label= val 
 				input(type="checkbox")
 				span
 mixin inputRadio(label, options, optionsCheck, className ) 
 	.checkbox-container
-		b=label
+		h3=label
 	each val, index in options
 		.checkbox(class=className)
 			label= val
@@ -37,6 +37,32 @@ mixin inputSelect(firstText, options, className)
 	select.style-select(data-text=firstText data-class=className)
 		each val in options
 			option= val
+mixin rangeSliderOne(name, range) 
+	h3=name
+	.range-slider-container.style-range-container
+		.slider-track
+		input(type="range" class="range" min="0" max=range value="0")
+		.range-num 0
+mixin rangeSliderTwo(name, rangeMax, rangeFrom, rangeTo) 
+	h3=name
+	.range-sliders-container.style-range-container
+		.slider-track
+		input(type="range" class="slider-1" min="0" max=rangeMax value=rangeFrom name='a')
+		input(type="range" class="slider-2" min="0" max=rangeMax value=rangeTo name='b')
+		.range-num.range-num-1(data-name='a') 0
+		.range-num.range-num-2(data-name='b') 0
+mixin rangeSliderThree(rangeMin, rangeMax, rangeFrom, rangeTo)
+	.range-sliders-outer
+		.range-sliders-input
+			input.input-decorate.range-input-from(type="text" placeholder="0" value=rangeFrom)
+			span -
+			input.input-decorate.range-input-to(type="text" placeholder="300" value=rangeTo)
+	.range-sliders-container.style-range-container.range-slider-second
+		.slider-track
+		.slider-track.slider-track-color
+		input(type="range" class="slider-1" min=rangeMin max=rangeMax value=rangeFrom name='a')
+		input(type="range" class="slider-2" min=rangeMin max=rangeMax value=rangeTo name='b')
+
 mixin inputSubmit(textBtn, className, wrapClassName)
 	.form-btn-container(class=wrapClassName)
 		input(type="submit" class='btn '+className  value=textBtn)

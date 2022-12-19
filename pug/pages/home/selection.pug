@@ -5,40 +5,18 @@ section.selection-home
 		.col-4  
 			.selection-item 
 				+inputSelect('ТИП СУДНА', ['селект 1','селект 2','селект 3','селект 4','селект 5',], 'boad-select')
+		.col-4
+			.selection-item 
+				+rangeSliderOne('КОЛИЧЕСТВО КАЮТ', 10)
 		.col-4  
 			.selection-item 
-				h3 КОЛИЧЕСТВО КАЮТ
-				.range-slider-container.style-range-container
-					.slider-track
-					input(type="range" class="range" min="0" max="10" value="0")
-					.range-num 0
+				+rangeSliderTwo('ЦЕНА (AED/час)', 100, 30, 70)
 		.col-4  
 			.selection-item 
-				h3 ЦЕНА (AED/час)
-				.range-sliders-container.style-range-container
-					.slider-track
-					input(type="range" class="slider-1" min="0" max="100" value="30" name='a')
-					input(type="range" class="slider-2" min="0" max="100" value="70" name='b')
-					.range-num.range-num-1(data-name='a') 0
-					.range-num.range-num-2(data-name='b') 0
+				+rangeSliderTwo('ДЛИНА (м.)', 60, 10, 22)
 		.col-4  
 			.selection-item 
-				h3 ДЛИНА (м.)
-				.range-sliders-container.style-range-container
-					.slider-track
-					input(type="range" class="slider-1" min="0" max="60" value="10" name='c')
-					input(type="range" class="slider-2" min="0" max="60" value="22" name='d')
-					.range-num.range-num-1(data-name='c') 0
-					.range-num.range-num-2(data-name='d') 0
-		.col-4  
-			.selection-item 
-				h3 ВМЕСТИМОСТЬ (чел.)
-				.range-sliders-container.style-range-container
-					.slider-track
-					input(type="range" class="slider-1" min="0" max="40" value="2" )
-					input(type="range" class="slider-2" min="0" max="40" value="20" )
-					.range-num.range-num-1 0
-					.range-num.range-num-2 0
+				+rangeSliderTwo('ВМЕСТИМОСТЬ (чел.)', 40, 2, 20)
 		.col-4  
 			.selection-btn-container
 				.btn.btn--yellow Поиск яхт

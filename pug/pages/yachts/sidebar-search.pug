@@ -1,0 +1,48 @@
+.sidebar-search
+	.search-main
+		input.input-decorate(type="text" placeholder="Введите название яхты")
+		.search-ico
+	.sidebar-search-item
+		i
+		h3 тип судна
+		.sidebar-item-container
+			.form-line
+				+inputRadio(false, ['Все', 'Катер','Моторная яхта'])
+	.sidebar-search-item
+		i
+		h3 длина
+		.sidebar-item-container
+			.search-tabs
+				span.active Футы
+				span Метры
+			+rangeSliderThree(0, 500, 50, 300)
+	.sidebar-search-item
+		i
+		h3 цена за час
+		.sidebar-item-container
+			.search-tabs
+				span.active AED
+				span RUB
+			+rangeSliderThree(0, 2800, 0, 2400)
+	.sidebar-search-item
+		i
+		h3 количество гостей
+		.sidebar-item-container
+			+rangeSliderThree(0, 40, 0, 24)
+	.sidebar-search-item
+		i
+		h3 количество кают
+		.sidebar-item-container
+			+rangeSliderThree(0, 20, 0, 5)
+	.sidebar-search-item
+		i
+		h3 год постройки
+		.sidebar-item-container
+			+rangeSliderThree(2000, 2022, 2000, 2022)
+	.sidebar-search-item
+		i
+		h3 год рефита
+		.sidebar-item-container
+			+rangeSliderThree(2012, 2022, 2012, 2022)
+	.btn-container 
+		a.btn.btn--blue(href="#") Сбросить фильтры

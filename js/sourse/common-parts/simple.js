@@ -45,51 +45,6 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 }, false ); 
 
 
-$('.range').on('change input', function () {
-  setRangeNum('.range-slider-container', '.range-num', $(this));
-});
-
-let minGap = 6;
-
-
-
-function setRangeNum(wrap, num, thisEl){
-
-  let offsetLeftRange = (100/thisEl.attr('max'))*thisEl.val();
-  let rangeNum = thisEl.parents(wrap).find(num);
-
-  console.log(thisEl.val(), rangeNum.attr('data-name')); //rangeNum
-
-  rangeNum.html(thisEl.val());
-  rangeNum.css({left: offsetLeftRange+'%',transform: 'translateX(-'+offsetLeftRange+'%)'});
-}
-
-
-
-$('.range-sliders-container').each(function(){
-
-  let sliderOne = $(this).find('.slider-1');
-  let sliderTwo = $(this).find('.slider-2');
-
-  sliderOne.on('change input', function () {
-    if(parseInt(sliderTwo.val()) - parseInt(sliderOne.val()) <= minGap){
-      sliderOne.val(parseInt(sliderTwo.val()) - minGap);
-    }
-    setRangeNum('.range-sliders-container', '.range-num-1', $(this));
-  });
-
-  sliderTwo.on('change input', function () {
-    if(parseInt(sliderTwo.val()) - parseInt(sliderOne.val()) <= minGap){
-      sliderTwo.val(parseInt(sliderOne.val()) + minGap);
-    }
-  
-    setRangeNum('.range-sliders-container', '.range-num-2', $(this));
-  });
-
-  setRangeNum('.range-sliders-container', '.range-num-1', $(this).find('.slider-1'));
-  setRangeNum('.range-sliders-container', '.range-num-2', $(this).find('.slider-2'));
-
-});
 
 
 $('.warning-show').on('click',function(e){
@@ -99,3 +54,7 @@ $('.warning-show').on('click',function(e){
 $('.warning-close').on('click',function(){
   $(this).parents('.warning-item').removeClass('active');
 }); 
+
+$('.sidebar-search-item h3, .sidebar-search-item i').on('click',function(){
+  $(this).parents('.sidebar-search-item').toggleClass('active');
+});

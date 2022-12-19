@@ -162,6 +162,7 @@ h2 {
   padding: 0 15px;
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
 }
 
 .form-grid {
@@ -173,6 +174,11 @@ h2 {
 }
 
 .catalog-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1280px;
   grid-gap: 30px;
 }
 
@@ -205,7 +211,7 @@ section {
 }
 
 .btn-container-section {
-  padding: 30px 0 15px;
+  padding: 45px 0 90px;
   text-align: center;
 }
 .btn-container-section .btn {
@@ -214,9 +220,14 @@ section {
 
 .breadcrumbs {
   font-size: 14px;
-  padding: 15px 0 15px;
+  margin: 15px 0 10px;
+  padding: 0 8px;
   color: #202020;
-  border-bottom: 1px solid #202020;
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: inline-block;
 }
 .breadcrumbs em {
   font-size: 0;
@@ -252,8 +263,11 @@ section {
   min-height: calc(100vh - 130px);
 }
 .content h1 {
-  padding: 30px 0 30px;
-  color: #202020;
+  padding: 10px 0 30px;
+  color: #14143C;
+  text-align: center;
+  font-size: 68px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1024px) {
@@ -1475,25 +1489,54 @@ section {
   top: 0;
   opacity: 0;
 }
+.checkbox input:checked ~ span,
+.radio input:checked ~ span {
+  background-color: #C19F56;
+  border-color: #C19F56;
+}
 .checkbox input:checked ~ span:after,
 .radio input:checked ~ span:after {
   display: block;
 }
 .checkbox span,
 .radio span {
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  left: 0px;
+  top: 5px;
+  border: 1px solid #98A1A7;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.checkbox span:after,
+.radio span:after {
+  content: "";
+  width: 10px;
+  position: absolute;
+  height: 10px;
+  left: 4px;
+  top: 4px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  display: none;
+}
+
+.agreement span {
   width: 21px;
   position: absolute;
   height: 21px;
   left: 0px;
   top: 5px;
   background-color: #C19F56;
-  -webkit-transition: ease-out 0.5s;
-  transition: ease-out 0.5s;
-  cursor: pointer;
+  border-radius: 0%;
+  border: 0;
 }
-.checkbox span:after,
-.radio span:after {
+.agreement span:after {
   content: "";
+  background: none;
   width: 80%;
   position: absolute;
   height: 80%;
@@ -1503,7 +1546,6 @@ section {
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("../images/icons/agree-black.svg");
-  display: none;
 }
 
 /*-checkbox-wp-*/
@@ -1523,6 +1565,85 @@ section {
 }
 
 /*password-field end*/
+/* range-sliders */
+.style-range-container {
+  position: relative;
+  height: 20px;
+  margin: 20px 0 0;
+}
+.style-range-container .slider-track {
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  left: 0;
+  top: 50%;
+  background-color: #ffffff;
+}
+.style-range-container .range-num {
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  left: 0;
+  top: 28px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+.style-range-container input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  margin: 0;
+  outline: none;
+  background: none;
+  pointer-events: none;
+  position: absolute;
+}
+.style-range-container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: #14143C;
+  border: 1px solid #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.range-sliders-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.range-sliders-input span {
+  margin: auto 8px;
+}
+.range-sliders-input .input-decorate {
+  border: 1px solid #E2E2E2;
+}
+
+.range-slider-second .slider-track {
+  background-color: #E2E2E2;
+  height: 4px;
+  border-radius: 6px;
+  margin-top: -2px;
+}
+.range-slider-second .slider-track-color {
+  left: 25%;
+  right: 75%;
+  background-color: #C19F56;
+  width: auto;
+}
+.range-slider-second input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #C19F56;
+  background-color: #ffffff;
+}
+
 .preloader-container {
   position: relative;
   height: 120px;
@@ -1601,7 +1722,7 @@ section {
   border-color: #ffffff;
   border-radius: 30px;
   background-color: #ffffff;
-  padding: 14px 5px;
+  padding: 10px 15px;
   display: inline-block;
   cursor: pointer;
   text-align: center;
@@ -1985,7 +2106,9 @@ section {
 .btn-new-site span {
   display: inline-block;
   margin: auto;
-} /*-----btns-end----*/
+}
+
+/*-----btns-end----*/
 /*-----social-start-----*/
 .social {
   display: inline-block;
@@ -2033,7 +2156,7 @@ section {
  *
  * /*-----header-start----*/
 .stub {
-  height: 140px;
+  height: 190px;
 }
 
 header {
@@ -2202,7 +2325,7 @@ header .btn {
 }
 
 .stick .logo img {
-  width: 135px;
+  width: 131px;
 }
 
 .feedback-header {
@@ -2861,54 +2984,10 @@ footer .ico-box {
   background-color: rgba(226, 226, 226, 0.2);
 }
 
-/* range-sliders */
-.style-range-container {
-  position: relative;
-  height: 20px;
-  margin: 20px 0 0;
-}
-.style-range-container .slider-track {
-  width: 100%;
-  position: absolute;
-  height: 1px;
-  left: 0;
-  top: 50%;
-  background-color: #ffffff;
-}
-.style-range-container .range-num {
-  width: 20px;
-  position: absolute;
-  height: 20px;
-  left: 0;
-  top: 28px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 14px;
-}
-.style-range-container input[type=range] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: 100%;
-  margin: 0;
-  outline: none;
-  background: none;
-  pointer-events: none;
-  position: absolute;
-}
-.style-range-container input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
-  background-color: #14143C;
-  border: 1px solid #ffffff;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  cursor: pointer;
-  pointer-events: auto;
+.yachts-home .yachts-item-description {
+  display: none;
 }
 
-/* range-sliders */
 .services-home {
   padding-bottom: 0;
 }
@@ -3950,7 +4029,6 @@ footer .ico-box {
 }
 .yachts-item h3 {
   font-size: 24px;
-  font-weight: 700;
   margin: 0 0 13px;
 }
 .yachts-item h3 a {
@@ -3960,6 +4038,7 @@ footer .ico-box {
   line-clamp: 2;
   position: relative;
   overflow: hidden;
+  font-size: inherit;
 }
 .yachts-item h3 a:hover {
   color: #C19F56;
@@ -3977,8 +4056,8 @@ footer .ico-box {
 
 .yachts-item-price {
   font-size: 24px;
-  font-weight: 700;
   color: #C19F56;
+  font-weight: 700;
 }
 
 .yachts-item-img {
@@ -4017,8 +4096,15 @@ footer .ico-box {
   height: 100%;
   border-radius: 4px;
 }
-.yachts-item-img-owl .owl-dot.active::after, .yachts-item-img-owl .owl-dot:hover::after {
-  background-color: #14143C;
+.yachts-item-img-owl .owl-dot.active, .yachts-item-img-owl .owl-dot:hover {
+  border-color: #14143C;
+}
+
+.yachts-item-description {
+  font-size: 14px;
+}
+.yachts-item-description li {
+  margin: 0 0 10px;
 }
 
 .yachts-logo {
@@ -4047,6 +4133,7 @@ footer .ico-box {
   width: 20px;
   position: absolute;
   height: 20px;
+  z-index: 2;
   right: 0;
   top: 0;
   cursor: pointer;
@@ -4060,7 +4147,7 @@ footer .ico-box {
   background-image: url("../images/icons/heart-yellow.svg");
 }
 
-.yachts-adv {
+.yachts-item-adv {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4092,10 +4179,335 @@ footer .ico-box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 30px;
+  gap: 12px;
 }
 .btn-yachts-container .btn {
   width: 100%;
+}
+
+/*feedback-sidebar*/
+.feedback-mini {
+  background-color: #14143C;
+  color: #ffffff;
+  padding: 45px 15px;
+}
+.feedback-mini h2 {
+  text-align: center;
+  color: inherit;
+  font-size: 24px;
+  margin: 0 0 30px;
+}
+.feedback-mini input {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.feedback-mini .agreement {
+  font-size: 14px;
+}
+.feedback-mini .form-btn-container {
+  margin-top: 30px;
+}
+.feedback-mini .btn {
+  width: 100%;
+  margin: 0;
+}
+
+/*feedback-sidebar*/
+/*catalog-filter*/
+.catalog-sorting-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 45px;
+}
+
+.catalog-filter .btn {
+  width: auto;
+  margin-right: 5px;
+}
+.catalog-filter .btn:hover, .catalog-filter .btn.active {
+  background-color: #14143C;
+  border-color: #14143C;
+  color: #ffffff;
+}
+
+.catalog-sort {
+  width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+}
+.catalog-sort b {
+  width: 170px;
+  display: inline-block;
+  font-weight: 600;
+  color: #98A1A7;
+  text-transform: uppercase;
+  margin: auto 0;
+}
+
+.sort-select {
+  border: 1px solid #E2E2E2;
+  border-radius: 30px;
+  font-size: inherit;
+  padding: 10px 12px;
+}
+
+.catalog-view {
+  padding: 5px 0 5px 5px;
+}
+
+.listing-tile-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/listing-tile-gray.svg");
+  cursor: pointer;
+}
+.listing-tile-btn.active, .listing-tile-btn:hover {
+  background-image: url("../images/icons/listing-tile-yellow.svg");
+}
+
+.listing-list-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/icons/listing-list-gray.svg");
+  margin-left: 8px;
+  cursor: pointer;
+}
+.listing-list-btn.active, .listing-list-btn:hover {
+  background-image: url("../images/icons/listing-list-yellow.svg");
+}
+
+/*catalog-filter*/
+/*.catalog-sidebar*/
+.catalog-sidebar .search-main {
+  margin-bottom: 45px;
+}
+.catalog-sidebar .btn {
+  width: 100%;
+}
+
+.sidebar-search {
+  margin-bottom: 60px;
+}
+
+.sidebar-search-item {
+  position: relative;
+  border-bottom: 1px solid #E2E2E2;
+  padding: 0 0 25px;
+  margin: 0 0 30px;
+}
+.sidebar-search-item i {
+  cursor: pointer;
+  width: 15px;
+  position: absolute;
+  height: 15px;
+  right: 0;
+  top: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-image: url("../images/arrows/carret-down-blue.svg");
+  -webkit-transition: ease-out 0.25s;
+  transition: ease-out 0.25s;
+}
+.sidebar-search-item i:hover {
+  background-image: url("../images/arrows/carret-down-yellow.svg");
+}
+.sidebar-search-item .checkbox {
+  display: block;
+}
+.sidebar-search-item h3 {
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.sidebar-search-item h3:hover {
+  color: #C19F56;
+}
+.sidebar-search-item.active h3 {
+  color: #C19F56;
+}
+.sidebar-search-item.active i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-image: url("../images/arrows/carret-down-yellow.svg");
+}
+.sidebar-search-item.active .sidebar-item-container {
+  max-height: 500px;
+}
+
+.sidebar-item-container {
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.search-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #E2E2E2;
+  margin: 0 0 30px;
+}
+.search-tabs span {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px;
+  position: relative;
+}
+.search-tabs span.active {
+  color: #C19F56;
+}
+.search-tabs span.active::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #C19F56;
+}
+
+/*.catalog-sidebar*/
+.yachts-list-adv {
+  background-color: #14143C;
+  color: #ffffff;
+  position: relative;
+}
+.yachts-list-adv h2, .yachts-list-adv h3 {
+  color: inherit;
+}
+
+.yachts-adv-line {
+  width: calc(80% - 60px);
+  position: absolute;
+  height: 1px;
+  left: 30px;
+  top: 295px;
+  border-bottom: 1px dashed #ffffff;
+}
+
+.yachts-adv-num {
+  width: 70px;
+  height: 70px;
+  background-color: #C19F56;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 100%;
+  margin: 0 0 15px;
+}
+.yachts-adv-num span {
+  margin: auto;
+}
+
+.yachts-adv-item {
+  position: relative;
+}
+.yachts-adv-item h3 {
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+
+.yachts-adv-text {
+  margin: 0 0 30px;
+}
+
+.yachts-adv-item-offset {
+  padding-top: 260px;
+}
+
+.yachts-adv-item-last {
+  padding-top: 34px;
+}
+
+.yachts-main-detail {
+  background-color: #E2E2E2;
+  max-width: 1920px;
+  height: 580px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: -100px;
+}
+.yachts-main-detail .main-full {
+  width: 100%;
+  position: absolute;
+  height: auto;
+  z-index: 2;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.yachts-main-detail h1 {
+  width: 50%;
+  font-size: 48px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+.yachts-main-detail h1::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  right: 100%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.yachts-main-img,
+.yachts-main-gallery {
+  width: 50%;
+}
+
+.yachts-main-img {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.yachts-main-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.yachts-gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 /*-----yachts-end-----*/

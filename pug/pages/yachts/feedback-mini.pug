@@ -1,0 +1,6 @@
+.feedback-mini 
+	h2 Обратная связь
+	+inputText('Ваше имя','form-line')
+	+inputPhone('Ваш телефон','form-line')
+	+inputCheckbox(false,['Я даю свое согласие на обработку персональных данных'], 'agreement')
+	+inputSubmit('Связаться', 'btn--yellow')

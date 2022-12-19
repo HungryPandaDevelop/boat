@@ -6,8 +6,8 @@
 
   h3
     font-size: $largeSize
-    font-weight: 700
     margin: 0 0 13px
+
     a
       display: -webkit-box
       -webkit-line-clamp: 2
@@ -15,6 +15,7 @@
       line-clamp: 2
       position: relative
       overflow: hidden
+      font-size: inherit
       &:hover
         color: $yellowColor
   .owl-carousel
@@ -23,11 +24,10 @@
     bottom: 30px
 .yachts-item-info
   padding: 20px
-
 .yachts-item-price
   font-size: $largeSize
-  font-weight: 700
   color: $yellowColor
+  font-weight: 700
 .yachts-item-img
   width: 100%
   height: 320px
@@ -52,10 +52,13 @@
       width: 100%
       height: 100%
       border-radius: 4px
-    &.active::after,
-    &:hover::after
-      background-color: $blueColor
-
+    &.active,
+    &:hover
+      border-color: $blueColor
+.yachts-item-description
+  font-size: $smallSize
+  li
+    margin: 0 0 10px
 .yachts-logo
   @include positionElement(100px, 70px,0,0)
   z-index: 2
@@ -69,7 +72,7 @@
     color: $whiteColor
     font-size: $smallSize
 .yachts-item-liked
-  @include positionElement(20px,20px,0,0,right)
+  @include positionElement(20px,20px,0,0,right, top, 2)
   cursor: pointer
   margin: 15px
   @include bgImageEl("../images/icons/heart-blue.svg")
@@ -77,7 +80,7 @@
   &:hover
     background-image: url("../images/icons/heart-yellow.svg")
 
-.yachts-adv
+.yachts-item-adv
   display: flex
   justify-content: space-between
   border-top: 1px solid $grayColorSecond
@@ -96,6 +99,29 @@
 .btn-yachts-container
   display: flex
   justify-content: space-between
-  gap: 30px
+  gap: 12px
   .btn
     width: 100%
+
+/*feedback-sidebar*/
+.feedback-mini
+  background-color: $blueColor
+  color: $whiteColor
+  padding: 45px 15px
+  h2
+    text-align: center
+    color: inherit
+    font-size: $largeSize
+    margin: 0 0 30px
+  input
+    margin-bottom: 30px
+    font-size: $smallSize
+    color: $whiteColor
+  .agreement
+    font-size: $smallSize
+  .form-btn-container
+    margin-top: 30px
+  .btn
+    width: 100%
+    margin: 0
+/*feedback-sidebar*/

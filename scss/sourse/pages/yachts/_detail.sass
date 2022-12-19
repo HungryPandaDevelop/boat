@@ -1,0 +1,36 @@
+.yachts-main-detail
+  background-color: $grayColorSecond
+  max-width: 1920px
+  height: 580px
+  display: flex
+  position: relative
+  margin-top: -100px
+  .main-full
+    @include positionElement(100%, auto,50%,0,left, bottom, 2)
+    transform: translateX(-50%)
+
+  h1
+    width: 50%
+    font-size: $hugeSize
+    text-align: left
+    background-color: rgba($whiteColor, 0.7)
+    position: relative
+    &::before
+      content: ""
+      @include positionElement(100%,100%,100%,0,right)
+      background-color: rgba($whiteColor, 0.7)
+.yachts-main-img,
+.yachts-main-gallery
+  width: 50%
+
+.yachts-main-img
+  position: relative
+  width: 50%
+  height: 100%
+.yachts-main-gallery
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+.yachts-gallery-item
+  width: 100%
+  height: 100%
+  position: relative
