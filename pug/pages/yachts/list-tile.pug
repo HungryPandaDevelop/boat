@@ -7,8 +7,8 @@ include ../../default/build-header
   .main-grid.main-grid-indent
     .col-3
       .catalog-sidebar
-        include sidebar-search.pug
-        include feedback-mini.pug
+        include parts/sidebar-search.pug
+        include parts/feedback-mini.pug
     .col-9
       .catalog-sorting-container
         .catalog-filter
@@ -29,7 +29,7 @@ include ../../default/build-header
   .main-full.btn-container-section
     a.btn.btn--yellow(href="#") Показать еще
 
-  include yachts-adv.pug
+  include parts/yachts-adv.pug
   include ../home/routes.pug
   include ../home/services.pug
   include ../home/feedback.pug

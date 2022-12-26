@@ -1,27 +1,30 @@
 include ../../default/build-header
-    
+		
 // header end
 .stub
 +roofContent("Lorem impusm", false)
-  .yachts-main-detail
-    .main-full
-      h1 Azimut 62 Lucky Star Lucky Star
-    .yachts-main-img.img-cover 
-      img(src="/images/temp/boad/1.jpg", alt="")
-      .topic-stub
-    .yachts-main-gallery
-      .yachts-gallery-item.img-cover 
-        img(src="/images/temp/boad/1.jpg", alt="")
-      .yachts-gallery-item.img-cover 
-        img(src="/images/temp/boad/2.jpg", alt="")
-      .yachts-gallery-item.img-cover 
-        img(src="/images/temp/boad/3.jpg", alt="")
-      .yachts-gallery-item.img-cover 
-        img(src="/images/temp/boad/1.jpg", alt="")
+	.yachts-main-detail
+		.main-full
+			h1 Azimut 62 Lucky Star Lucky Star
+		.yachts-detail-img.img-cover 
+			img(src="/images/temp/boad/1.jpg", alt="")
+			.topic-stub
+		.yachts-detail-gallery
+			.yachts-gallery-item.img-cover 
+				img(src="/images/temp/boad/1.jpg", alt="")
+			.yachts-gallery-item.img-cover 
+				img(src="/images/temp/boad/2.jpg", alt="")
+			.yachts-gallery-item.img-cover 
+				img(src="/images/temp/boad/3.jpg", alt="")
+			.yachts-gallery-item.img-cover 
+				img(src="/images/temp/boad/1.jpg", alt="")
+	include parts/detail-about.pug
+	include ../detail/detail-tabs.pug
+	include ../home/feedback.pug
+	include ../home/yachts.pug	
+	include ../detail/reviews.pug
 
-  include ../detail/reviews.pug
-include ../home/feedback.pug
-include ../detail/news-last.pug
+	include ../home/blog.pug
 // footer start 
 .stub-footer
 include ../../blocks/footer.pug

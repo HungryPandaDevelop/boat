@@ -1,0 +1,39 @@
+mixin characteristicItem(img, name, text)
+	.col-3
+		.characteristic-item
+			div
+				.characteristic-item-img
+					img(src=img, alt="")
+			.characteristic-item-info
+				.characteristic-item-container
+					h3
+						=name
+					.characteristic-item-text
+						=text
+section.detail-tabs
+	.main-full
+		.detail-tabs-nav
+			ul.ln
+				li.active Спецификация
+				li Описание
+				li Дополнительные услуги
+				li Галерея
+				li Правила аренды
+			.detail-tabs-carriage
+	.main-full
+		.detail-tabs-container
+		.detail-tabs-item.active
+			h3 Характеристики
+			.detail-tabs-grid
+				+characteristicItem('/images/characteristic/eng.svg', 'Azimut, Италия', 'Azimut, Италия')
+				+characteristicItem('/images/characteristic/calendar.svg', '2004', 'Год постройки')
+				+characteristicItem('/images/characteristic/boad-1.svg', '18,9 м.(62 ft.)', 'Длина')
+				+characteristicItem('/images/characteristic/boad-2.svg', '5,06 м.', 'Ширина (в главной секции)')
+				+characteristicItem('/images/characteristic/family.svg', '29', 'Гости')
+				+characteristicItem('/images/characteristic/handle.svg', '3', 'Каюты')
+				+characteristicItem('/images/characteristic/bad.svg', '6+1', 'Спальные места')
+				+characteristicItem('/images/characteristic/cap.svg', '3', 'Команды')
+				+characteristicItem('/images/characteristic/rudder.svg', '27 узл.', 'Круизная скорость')
+				+characteristicItem('/images/characteristic/screw.svg', '32 узл.', 'Максимальная скорость')
+				+characteristicItem('/images/characteristic/toilet.svg', '3', 'Количество санузлов')
+				+characteristicItem('/images/characteristic/blob.svg', '1000 л.', 'Запас воды')

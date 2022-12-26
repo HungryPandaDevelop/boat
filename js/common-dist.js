@@ -458,3 +458,39 @@ $('.warning-close').on('click',function(){
 $('.sidebar-search-item h3, .sidebar-search-item i').on('click',function(){
   $(this).parents('.sidebar-search-item').toggleClass('active');
 });
+
+let detailTabs = $('.detail-tabs');
+if(detailTabs.length > 0){
+  const onHoverMoveCarriage = function(num){
+    let widthCarriage = detailTabs.find('li').eq(num).width();
+    let offsestLeftCarriage = detailTabs.find('li').eq(num).position().left;
+    $('.detail-tabs-carriage').css({width: widthCarriage+'px', left: offsestLeftCarriage+'px'});
+  }
+  let timeOutId;
+  let curretTabs = 0;
+  let timeReturn = 500;
+  detailTabs.find('li').hover(
+  function(){
+
+    clearInterval(timeOutId)
+    onHoverMoveCarriage($(this).index());
+
+  
+  },function(){
+
+    timeOutId = setTimeout(function(){
+      onHoverMoveCarriage(curretTabs);
+    }, timeReturn);
+  });
+
+  detailTabs.find('li').on('click',function(){
+    
+    curretTabs = $(this).index();
+    detailTabs.find('li').removeClass('active').eq(curretTabs).addClass('active');
+    onHoverMoveCarriage(curretTabs);
+  });
+
+  onHoverMoveCarriage(0);
+
+
+}

@@ -23,6 +23,8 @@
 	i
 		@include icoEl(24px, 24px, "../images/social/whatsapp-color.svg")
 		margin-right: 8px
+.whatsapp-btn--single
+	@include icoEl(36px, 36px, "../images/social/whatsapp-color.svg")
 .phone-btn
 	i,span
 		display: inline-block
@@ -30,6 +32,13 @@
 	i
 		@include icoEl(24px, 24px, "../images/icons/phone-blue.svg")
 		margin-right: 8px
+.phone-btn--yellow
+	background-color: $yellowColor
+	border-radius: 100%
+	@include icoEl(36px, 36px, "../images/icons/phone-white-border.svg", middle, 18px)
+	&:hover
+		background-color: $blueColor
+
 .liked-btn
 	@include icoEl(36px, 36px, "../images/icons/heart-white.svg", middle, 21px, center 10px)
 	background-color: $blueColor
