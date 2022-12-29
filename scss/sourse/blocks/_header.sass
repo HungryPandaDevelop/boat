@@ -1,6 +1,7 @@
 
 .stub
-	height: 190px
+	// height: 190px
+	height: 140px
 header
 	@include positionElement(100%, auto, 0, auto, left, top, 3, fixed )
 	color: $blueColor
@@ -118,3 +119,20 @@ header
 		color: $yellowColor
 		i
 			background-image: url("../images/arrows/carret-down-yellow.svg")
+@media (max-width: 1280px)
+	.search-main
+		width: auto
+@media (max-width: 992px)
+	header
+		.social,
+		.language-select
+			display: none
+	.line-header-nav
+		display: none
+	.stub
+		height: 70px
+	.stick .logo img
+		width: 68px
+@media (max-width: 768px)
+	.search-main
+		display: none

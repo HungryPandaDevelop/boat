@@ -5,8 +5,9 @@ section.feedback-home
 			.feedback-text.
 				Свяжитесь с нами по телефону <a href="#">+971 56 115 16 24</a>, <a href="#">WhatsApp</a> или заполните эту контактную форму, и мы свяжемся с Вами в ближайшее время
 		.col-7.col-md-12.form-default
-			+inputText('Ваше имя','form-line')
-			+inputEmail('Ваш Email','form-line')
-			+inputTextarea('Ваш телефон','form-line')
-			+inputCheckbox(false,['Я даю свое согласие на обработку персональных данных'], 'agreement')
-			+inputSubmit('Отправить', 'btn--yellow')
+			.main-grid
+				+inputText('Ваше имя','form-line col-12 col-md-6')
+				+inputEmail('Ваш Email','form-line col-12 col-md-6')
+				+inputTextarea('Ваш телефон','form-line col-12')
+				+inputCheckbox(false,['Я даю свое согласие на обработку персональных данных'], 'agreement col-12')
+				+inputSubmit('Отправить', 'btn--yellow', 'col-12')

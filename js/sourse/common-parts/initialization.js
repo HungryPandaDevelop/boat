@@ -26,10 +26,23 @@ owlYachtsItemImg.owlCarousel({
 let owlSecond = $('.owl-second');
 
 owlSecond.owlCarousel({
-  items: 3,
   nav: true,
   dots: true,
-  margin: 30
+  margin: 30,
+  responsive:{
+    0:{
+      items:1,
+      margin: 15
+    },
+    576:{
+      items: 2,
+      margin: 15
+    },
+    786:{
+      items: 3,
+      margin: 15
+    }
+  }
 });
 
 

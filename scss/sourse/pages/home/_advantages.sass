@@ -46,3 +46,18 @@
     transform: translateX(-50%) rotate(45deg)
     background-color: $whiteColorSecond
     box-shadow: $shadowOne
+@media (max-width: 992px)
+  .advantages-item-text i
+    top: 8px
+    bottom: auto
+  .advantages-item-text
+    margin: 0
+    padding-left: 30px
+  .advantages-item-extra-1,
+  .advantages-item-extra-2
+    .advantages-hint
+      left: auto
+      right: -15px
+      transform: translateX(0)
+      &::after
+        left: calc(100% - 28px)
