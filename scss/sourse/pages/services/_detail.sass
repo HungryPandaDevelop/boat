@@ -1,0 +1,33 @@
+
+.services-main
+	background-color: $yellowColor
+	color: $whiteColor
+	height: 720px
+	position: relative
+	margin-top: -60px
+	h1
+		text-align: left
+		color: inherit
+	.btn
+		width: 280px
+	.main-grid,
+	.services-main-info
+		height: 100%
+.services-main-info
+	display: flex
+	position: relative
+.services-main-info-container
+	margin: auto 0
+.services-main-price
+	display: inline-block
+	color: $blueColor
+	background-color: $whiteColor
+	padding: 3px 30px
+	border-radius: 30px
+.services-main-text
+	margin-bottom: 30px
+.services-main-img
+	@include positionElement(calc(50% - 30px), 100%, calc(50% + 30px))
+.services-main-wather
+	@include positionElement(calc(50% + 30px), 100%, 0)
+	@include bgImageEl("/images/wather-sign.svg")

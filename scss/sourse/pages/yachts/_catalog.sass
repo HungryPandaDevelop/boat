@@ -1,0 +1,43 @@
+.yachts-item-grid
+  display: grid
+  grid-template-columns: repeat(9,1fr)
+  grid-column-gap: 30px
+  border: 1px solid $grayColorSecond
+  margin: 0 0 30px
+  &:last-child
+    margin-bottom: 0px
+  a
+    text-decoration: none
+  h3
+    font-size: $largeSize
+    margin: 0 0 15px
+    &:hover
+      color: $yellowColor
+  .yachts-item-img
+    height: 290px
+  .yachts-item-adv
+    border: 0
+  .yachts-item-info
+    padding-left: 0
+    padding-right: 0
+.yachts-item-middle
+  display: flex
+  .yachts-item-description
+    width: 40%
+  .yachts-item-adv
+    max-width: 260px
+    margin: auto
+    padding: 0
+.yachts-item-middle-delimetr
+  width: 1px
+  height: 100px
+  background-color: $grayColorSecond
+.yachts-item-bottom
+  display: flex
+  border-top: 1px solid $grayColorSecond
+  padding-top: 20px
+  .yachts-item-price
+    width: 30%
+    padding-top: 6px
+  .btn-yachts-container
+    width: 60%

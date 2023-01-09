@@ -23,7 +23,7 @@
     display: block
   h3
     text-transform: uppercase
-    margin: 0 0 10px
+    transition: ease-out 0.5s
     font-size: $smallSize
     font-weight: 700
     cursor: pointer
@@ -32,6 +32,7 @@
   &.active
     h3
       color: $yellowColor
+      margin: 0 0 10px
     i
       transform: rotate(90deg)
       background-image: url("../images/arrows/carret-down-yellow.svg")

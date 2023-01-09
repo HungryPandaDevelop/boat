@@ -4,42 +4,46 @@
     max-width: none
     padding: 0
     gap: 0
-.services-item
-  background-color: $blueColor
+.pricelist-section
+  .btn
+    margin-bottom: 15px
   a
     text-decoration: none
+    color: $yellowColor
+
+.pricelist-list
+  margin: 0 0 45px
+  li
+    display: flex
+    justify-content: space-between
+    border-top: 1px solid $grayColorSecond
+    padding: 25px 0
+    &:last-child
+      border-bottom: 1px solid $grayColorSecond
   h3
     font-size: $largeSize
-    text-transform: uppercase
-    color: $whiteColor
+    span
+      display: inline-block
+      margin-right: 15px
 
-  .services-item-price
-    display: inline-block
-    font-size: $smallSize
-    background-color: $whiteColor
-    padding: 3px 30px
-    color: $blueColor
-    border-radius: 15px
-    text-transform: uppercase
-    font-weight: 600
-.services-item-info
-  padding: 30px 30px 50px
-  position: relative
-  margin-top: auto
+.pricelist-price
+  font-size: $largeSize
+  font-weight: 700
+.question-ico
+  @include icoEl(28px, 28px, "/images/icons/question.svg")
 
-.services-item-img
-  height: 414px
-  display: flex
-  position: relative
-  overflow: hidden
-  .img-cover
-    @include positionElement(100%,100%,0,0)
-    transform: scale(1)
-    transition: ease-out 0.5s
-    opacity: 0.8
-  img
-    @include positionElement(100%,100%,0,0)
-  &:hover
-    .img-cover
-      transform: scale(1.1)
-      opacity: 0.9
+.simple-item-about
+  background-color: $grayColorSecond
+  margin-bottom: 45px
+  h3
+    text-transform: uppercase
+    font-size: $largeSize
+    margin: 45px 0 15px
+    &:first-child
+      margin-top: 0
+  p
+    margin: 0 0 15px
+.simple-item-text
+  padding: 60px
+.simple-item-img
+  margin-right: -15px

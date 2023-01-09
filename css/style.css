@@ -9,6 +9,13 @@
 /*-----fonts-start----*/
 @font-face {
   font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLight.ttf");
+  src: local("Gilroy UltraLight"), local("Gilroy-UltraLight"), url("../fonts/Gilroy-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-UltraLight.woff") format("woff"), url("../fonts/Gilroy-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/Gilroy-Regular.eot");
   src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -180,6 +187,11 @@ h2 {
   grid-template-columns: repeat(12, 1fr);
   max-width: 1280px;
   grid-gap: 30px;
+  margin-bottom: 90px;
+}
+
+.catalog-main {
+  margin-bottom: 90px;
 }
 
 .main-full {
@@ -1174,6 +1186,7 @@ section {
 .custom-select span {
   position: relative;
   z-index: 2;
+  top: 5px;
 }
 .custom-select i {
   background-position: center;
@@ -2052,6 +2065,10 @@ section {
   margin-right: 8px;
 }
 
+.whatsapp-btn--large {
+  width: 330px;
+}
+
 .whatsapp-btn--single {
   display: inline-block;
   vertical-align: middle;
@@ -2338,6 +2355,7 @@ header .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 130px;
 }
 .logo a {
   margin: auto 0;
@@ -3054,65 +3072,76 @@ footer .ico-box {
   gap: 0;
 }
 
-.services-item {
-  background-color: #14143C;
+.pricelist-section .btn {
+  margin-bottom: 15px;
 }
-.services-item a {
+.pricelist-section a {
   text-decoration: none;
-}
-.services-item h3 {
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.services-item .services-item-price {
-  display: inline-block;
-  font-size: 14px;
-  background-color: #ffffff;
-  padding: 3px 30px;
-  color: #14143C;
-  border-radius: 15px;
-  text-transform: uppercase;
-  font-weight: 600;
+  color: #C19F56;
 }
 
-.services-item-info {
-  padding: 30px 30px 50px;
-  position: relative;
-  margin-top: auto;
+.pricelist-list {
+  margin: 0 0 45px;
 }
-
-.services-item-img {
-  height: 414px;
+.pricelist-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #E2E2E2;
+  padding: 25px 0;
 }
-.services-item-img .img-cover {
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: ease-out 0.5s;
-  transition: ease-out 0.5s;
-  opacity: 0.8;
+.pricelist-list li:last-child {
+  border-bottom: 1px solid #E2E2E2;
 }
-.services-item-img img {
-  width: 100%;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  top: 0;
+.pricelist-list h3 {
+  font-size: 24px;
 }
-.services-item-img:hover .img-cover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  opacity: 0.9;
+.pricelist-list h3 span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.pricelist-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.question-ico {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28px;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/images/icons/question.svg");
+}
+
+.simple-item-about {
+  background-color: #E2E2E2;
+  margin-bottom: 45px;
+}
+.simple-item-about h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 45px 0 15px;
+}
+.simple-item-about h3:first-child {
+  margin-top: 0;
+}
+.simple-item-about p {
+  margin: 0 0 15px;
+}
+
+.simple-item-text {
+  padding: 60px;
+}
+
+.simple-item-img {
+  margin-right: -15px;
 }
 
 .suitable-home .main-grid {
@@ -3974,6 +4003,135 @@ footer .ico-box {
   vertical-align: middle;
 }
 
+.detail-tabs {
+  margin-bottom: 90px;
+}
+.detail-tabs img {
+  width: 100%;
+  margin: 0 0 45px;
+}
+.detail-tabs h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin: 0 0 30px;
+}
+.detail-tabs h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+}
+.detail-tabs h4 {
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+.detail-tabs p {
+  margin: 0 0 30px;
+}
+
+.detail-tabs-nav {
+  color: #98A1A7;
+  font-weight: 700;
+  border-bottom: 1px solid;
+  padding-bottom: 15px;
+  margin-bottom: 60px;
+  margin-top: 75px;
+  position: relative;
+}
+.detail-tabs-nav li {
+  display: inline-block;
+  padding-right: 45px;
+  cursor: pointer;
+}
+.detail-tabs-nav li:hover, .detail-tabs-nav li.active {
+  color: #C19F56;
+}
+
+.detail-tabs-carriage {
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  width: 2px;
+  position: absolute;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  background-color: #C19F56;
+}
+
+.detail-tabs-container p {
+  margin: 0 0 15px;
+}
+.detail-tabs-container h3 {
+  margin: 0px 0 30px;
+  font-size: 28px;
+}
+.detail-tabs-container table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.detail-tabs-container td {
+  border: 1px solid #E2E2E2;
+  padding: 15px;
+}
+.detail-tabs-item {
+  display: none;
+}
+.detail-tabs-item.active {
+  display: block;
+}
+
+.detail-tabs-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 60px 30px;
+}
+
+.characteristic-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.characteristic-item-img {
+  width: 74px;
+  height: 74px;
+  background-color: #E2E2E2;
+  border-radius: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 15px;
+}
+.characteristic-item-img img {
+  width: 40%;
+  height: 40%;
+  margin: auto;
+}
+
+.characteristic-item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.characteristic-item-info h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.characteristic-item-container {
+  margin: auto 0;
+}
+
+.characteristic-item-text {
+  color: #98A1A7;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 /*-----detail-end-----*/
 /*-----contacts-start----- */
 .contacts-items-container {
@@ -4166,6 +4324,74 @@ footer .ico-box {
 
 /*-----faq-end-----*/
 /*-----yachts-start-----*/
+.yachts-item-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(9, 1fr);
+  grid-column-gap: 30px;
+  border: 1px solid #E2E2E2;
+  margin: 0 0 30px;
+}
+.yachts-item-grid:last-child {
+  margin-bottom: 0px;
+}
+.yachts-item-grid a {
+  text-decoration: none;
+}
+.yachts-item-grid h3 {
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+.yachts-item-grid h3:hover {
+  color: #C19F56;
+}
+.yachts-item-grid .yachts-item-img {
+  height: 290px;
+}
+.yachts-item-grid .yachts-item-adv {
+  border: 0;
+}
+.yachts-item-grid .yachts-item-info {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.yachts-item-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.yachts-item-middle .yachts-item-description {
+  width: 40%;
+}
+.yachts-item-middle .yachts-item-adv {
+  max-width: 260px;
+  margin: auto;
+  padding: 0;
+}
+
+.yachts-item-middle-delimetr {
+  width: 1px;
+  height: 100px;
+  background-color: #E2E2E2;
+}
+
+.yachts-item-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #E2E2E2;
+  padding-top: 20px;
+}
+.yachts-item-bottom .yachts-item-price {
+  width: 30%;
+  padding-top: 6px;
+}
+.yachts-item-bottom .btn-yachts-container {
+  width: 60%;
+}
+
 .yachts-item {
   background-color: #ffffff;
   border: 1px solid #E2E2E2;
@@ -4188,12 +4414,6 @@ footer .ico-box {
 }
 .yachts-item h3 a:hover {
   color: #C19F56;
-}
-.yachts-item .owl-carousel {
-  padding-bottom: 0px;
-}
-.yachts-item .owl-dots {
-  bottom: 30px;
 }
 
 .yachts-item-info {
@@ -4224,6 +4444,12 @@ footer .ico-box {
 .yachts-item-img .yachts-img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+.yachts-item-img .owl-carousel {
+  padding-bottom: 0px;
+}
+.yachts-item-img .owl-dots {
+  bottom: 30px;
 }
 
 .yachts-item-img-owl {
@@ -4485,7 +4711,8 @@ footer .ico-box {
 }
 .sidebar-search-item h3 {
   text-transform: uppercase;
-  margin: 0 0 10px;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
@@ -4495,6 +4722,7 @@ footer .ico-box {
 }
 .sidebar-search-item.active h3 {
   color: #C19F56;
+  margin: 0 0 10px;
 }
 .sidebar-search-item.active i {
   -webkit-transform: rotate(90deg);
@@ -4704,116 +4932,6 @@ footer .ico-box {
 }
 
 /* .yachts-detail-about*/
-/* detail-tabs*/
-.detail-tabs {
-  margin-bottom: 90px;
-}
-
-.detail-tabs-nav {
-  color: #98A1A7;
-  font-weight: 700;
-  border-bottom: 1px solid;
-  padding-bottom: 15px;
-  margin-bottom: 60px;
-  margin-top: 75px;
-  position: relative;
-}
-.detail-tabs-nav li {
-  display: inline-block;
-  padding-right: 45px;
-  cursor: pointer;
-}
-.detail-tabs-nav li:hover, .detail-tabs-nav li.active {
-  color: #C19F56;
-}
-
-.detail-tabs-carriage {
-  -webkit-transition: ease-out 0.5s;
-  transition: ease-out 0.5s;
-  width: 2px;
-  position: absolute;
-  height: 4px;
-  left: 0;
-  bottom: 0;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
-  background-color: #C19F56;
-}
-
-.detail-tabs-container p {
-  margin: 0 0 15px;
-}
-.detail-tabs-container h3 {
-  margin: 0px 0 30px;
-  font-size: 28px;
-}
-.detail-tabs-container table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.detail-tabs-container td {
-  border: 1px solid #E2E2E2;
-  padding: 15px;
-}
-.detail-tabs-item {
-  display: none;
-}
-.detail-tabs-item.active {
-  display: block;
-}
-
-.detail-tabs-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 60px 30px;
-}
-
-.characteristic-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.characteristic-item-img {
-  width: 74px;
-  height: 74px;
-  background-color: #E2E2E2;
-  border-radius: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-right: 15px;
-}
-.characteristic-item-img img {
-  width: 40%;
-  height: 40%;
-  margin: auto;
-}
-
-.characteristic-item-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.characteristic-item-info h3 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.characteristic-item-container {
-  margin: auto 0;
-}
-
-.characteristic-item-text {
-  color: #98A1A7;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* detail-tabs*/
 /*-----yachts-end-----*/
 /*-----blog-start-----*/
 .blog-item {
@@ -4899,5 +5017,175 @@ footer .ico-box {
 }
 
 /*-----blog-end-----*/
+/*-----services-start-----*/
+.services-item {
+  background-color: #14143C;
+  color: #ffffff;
+}
+.services-item a {
+  text-decoration: none;
+}
+.services-item h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.services-item .services-item-price {
+  display: inline-block;
+  font-size: 14px;
+  background-color: #ffffff;
+  padding: 3px 30px;
+  color: #14143C;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.services-item .services-item-text {
+  margin-top: 0px;
+  position: relative;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  max-height: 0px;
+  overflow: hidden;
+  opacity: 0;
+}
+.services-item .btn-container {
+  text-align: right;
+  max-width: 80%;
+}
+
+.btn-item-plus {
+  width: 83px;
+  height: 83px;
+  border-radius: 100%;
+  background-color: #C19F56;
+  color: #ffffff;
+  font-size: 60px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 88px;
+  margin-bottom: 0px;
+  opacity: 0;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+.btn-item-plus span {
+  margin: auto;
+  font-weight: 200;
+}
+
+.services-item-info {
+  padding: 30px 30px 50px;
+  position: relative;
+  margin-top: auto;
+}
+
+.services-item-img {
+  height: 414px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.services-item-img .img-cover {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  opacity: 0.8;
+}
+.services-item-img img {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.services-item-img:hover .img-cover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.6;
+}
+.services-item-img:hover .services-item-text {
+  max-height: 300px;
+  margin-top: 30px;
+  opacity: 1;
+}
+.services-item-img:hover .btn-item-plus {
+  opacity: 1;
+  margin-bottom: 45px;
+}
+
+.services-main {
+  background-color: #C19F56;
+  color: #ffffff;
+  height: 720px;
+  position: relative;
+  margin-top: -60px;
+}
+.services-main h1 {
+  text-align: left;
+  color: inherit;
+}
+.services-main .btn {
+  width: 280px;
+}
+.services-main .main-grid,
+.services-main .services-main-info {
+  height: 100%;
+}
+
+.services-main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.services-main-info-container {
+  margin: auto 0;
+}
+
+.services-main-price {
+  display: inline-block;
+  color: #14143C;
+  background-color: #ffffff;
+  padding: 3px 30px;
+  border-radius: 30px;
+}
+
+.services-main-text {
+  margin-bottom: 30px;
+}
+
+.services-main-img {
+  width: calc(50% - 30px);
+  position: absolute;
+  height: 100%;
+  left: calc(50% + 30px);
+  top: 0;
+}
+
+.services-main-wather {
+  width: calc(50% + 30px);
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/images/wather-sign.svg");
+}
+
+/*-----services-end-----*/
 /*---------------pages-end----*/
 /*# sourceMappingURL=style.css.map */
