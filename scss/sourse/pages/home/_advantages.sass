@@ -17,6 +17,7 @@
     .advantages-hint
       opacity: 1
       visibility: visible
+
 .advantages-item-text
   position: relative
   padding-right: 30px
@@ -46,6 +47,13 @@
     transform: translateX(-50%) rotate(45deg)
     background-color: $whiteColorSecond
     box-shadow: $shadowOne
+
+.advantages-item--simple
+  width: auto
+  .advantages-item-text
+    padding: 0
+    margin: 0
+
 @media (max-width: 992px)
   .advantages-item-text i
     top: 8px

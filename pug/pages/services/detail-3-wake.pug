@@ -1,0 +1,62 @@
+include ../../default/build-header
+		
+// header end
+.stub
++roofContent('', false)
+	.services-main
+		.services-main-wather
+		.services-main-img.img-cover 
+			img(src="/images/temp/serv/6.jpg", alt="")
+		.main-grid 
+			.col-5.services-main-info 
+				.services-main-info-container
+					.services-main-price  от 850 AED/час
+					h1 Wake Dubai
+					.services-main-text  Аренда яхт в Дубае — лучшее место для аренды роскошных яхт в Дубае. Мы предлагаем широкий выбор яхт для аренды по разумным ценам, предоставляя посетителям и жителям всего мира изысканный опыт.
+					.btn-container 
+						a.btn.btn--blue(href="#") Забронировать услугу
+	+datailTabs(['Описание','Цены и бронирование','Наши катера','Видеоотчеты клиентов','Вопросы','Другие услуги'])
+	include ../detail/detail-slider.pug
+
+	include ../home/feedback.pug
+	+simpleItem('Индивидуальный опыт для всех', '/images/temp/boad/1.jpg', 'left')
+	+simpleItem('Индивидуальный опыт для всех', '/images/temp/boad/2.jpg', 'right')
+	+simpleItem('Индивидуальный опыт для всех', '/images/temp/boad/2.jpg', 'left')
+	include parts/adv-wake.pug
+	section.pricelist-section 
+		.main-full.head-section
+			h2.title-section цены
+			ul.ln.pricelist-list
+				-for(var x=0; x<3; x++)
+					li 
+						h3 
+							span Наименование услуги 60 мин.
+							.question-ico
+						.pricelist-price 800 AED
+			.btn-container 
+				a.btn.btn--blue-border.whatsapp-btn.whatsapp-btn--large
+					i
+					span Забронируйте сейчас в WhatsApp
+				.btn-hint.
+					Или воспользуйтесь <a href="#">формой</a> ниже
+	section.yachts-section
+		.main-full.head-section
+			h2.title-section Наши катера для вейксерфинга
+			.subtitle-section Если вы хотите арендовать лодку для вейксерфинга в Дубае, выберите её из списка ниже и заполните форму, нажав на кнопку “Забронировать”. Вы также можете задать любой возникший вопрос по вейксёрфингу или любой другой из наших услуг. Для этого воспользуйтесь формой “Задать вопрос”, либо просто позвоните нам по телефону +971 56 115 16 24 или напишите в WhatsApp. Мы с радостью проконсультируем вас по любому вопросу и учтём все ваши пожелания!
+		.main-full
+			+yachtsItemList("Аренда Azimut 62 Lucky Star","850 AED/час")
+			+yachtsItemList("Аренда Azimut 62 Lucky Star","850 AED/час")
+			+yachtsItemList("Аренда Azimut 62 Lucky Star","850 AED/час")
+			+yachtsItemList("Аренда Azimut 62 Lucky Star","850 AED/час")
+			+yachtsItemList("Аренда Azimut 62 Lucky Star","850 AED/час")
+	include ../home/feedback.pug
+	.video-slider
+	
+	include ../home/faq.pug
+	include ../home/reviews.pug
+	include ../detail/serv-adv.pug
+	include ../home/feedback.pug
+// footer start 
+include ../../blocks/footer.pug
+
+// footer end

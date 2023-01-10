@@ -15,6 +15,17 @@ owlAbout.owlCarousel({
   dots: false,
 });
 
+let owlDetail = $('.detail-owl');
+
+owlDetail.owlCarousel({
+  items: 5,
+  nav: true,
+  dots: false,
+  margin:10,
+  stagePadding: 155,
+  loop: true
+});
+
 let owlYachtsItemImg = $('.yachts-item-img-owl');
 
 owlYachtsItemImg.owlCarousel({
