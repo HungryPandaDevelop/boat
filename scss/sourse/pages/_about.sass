@@ -1,0 +1,41 @@
+.about-main
+	background-color: $blueColor
+	color: $whiteColor
+	height: 720px
+	position: relative
+	margin-top: -60px
+	h1
+		text-align: left
+		color: inherit
+	h2
+		font-size: 24px
+		color: inherit
+		margin: 0 0 25px
+	.btn
+		width: 280px
+	.main-grid,
+	.about-main-info
+		height: 100%
+.about-main-info
+	display: flex
+	position: relative
+.about-main-info-container
+	margin: auto 0
+
+.about-main-text
+	margin-bottom: 30px
+.about-main-img
+	@include positionElement( 50%, 100%, 0)
+.about-main-blue
+	background-color: $blueColor
+.about-main-img-full
+	@include positionElement(100%, 100%)
+	opacity: 0.7
+.about-main-wather
+	@include positionElement(50%, 100%, 50%)
+	@include bgImageEl("/images/wather-sign.svg", 60%, center)
+.about-water
+	text-align: left
+	padding: 90px 0 0px
+	.head-section
+		margin-bottom: 45px

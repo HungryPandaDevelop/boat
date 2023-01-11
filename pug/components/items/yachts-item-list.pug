@@ -1,4 +1,4 @@
-mixin yachtsItemList(name, text, data)
+mixin yachtsItemList(name, text, deleteBtn)
 	.yachts-item-grid
 		.col-3
 			.yachts-item-img
@@ -47,3 +47,5 @@ mixin yachtsItemList(name, text, data)
 					.btn-yachts-container
 						a(href="#").btn.btn--blue Забронировать
 						a(href="#").btn.btn--blue-border Подробнее
+			if deleteBtn
+				.delete-btn

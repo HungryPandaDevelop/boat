@@ -17,6 +17,14 @@ owlAbout.owlCarousel({
   dots: false,
 });
 
+let owlTeam = $('.owl-team');
+
+owlTeam.owlCarousel({
+  items: 1,
+  nav: true,
+  dots: true,
+});
+
 let owlDetail = $('.detail-owl');
 
 owlDetail.owlCarousel({
@@ -57,6 +65,27 @@ owlSecond.owlCarousel({
     }
   }
 });
+let owlThree = $('.owl-three');
+
+owlThree.owlCarousel({
+  nav: true,
+  dots: true,
+  margin: 30,
+  responsive:{
+    0:{
+      items:1,
+      margin: 15
+    },
+    576:{
+      items: 3,
+      margin: 15
+    },
+    786:{
+      items: 4,
+      margin: 15
+    }
+  }
+});
 
 
 
@@ -67,6 +96,13 @@ owlDetailMain.owlCarousel({
   dots: false,
   padding: 0,
   margin: 30,
+  items: 1,
+});
+let owlDefault = $('.owl-default');
+
+owlDefault.owlCarousel({
+  nav: true,
+  dots: true,
   items: 1,
 });
 

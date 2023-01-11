@@ -34,63 +34,10 @@
 	@include positionElement(100%, 100%)
 	opacity: 0.7
 .services-main-wather
-	@include positionElement(calc(50% + 30px), 100%, 0)
-	@include bgImageEl("/images/wather-sign.svg")
+	@include positionElement(calc(44.5% + 15px), 100%, 0)
+	@include bgImageEl("/images/wather-sign.svg", 60%, center)
 .services-water
 	text-align: left
 	padding: 90px 0 0px
 	.head-section
 		margin-bottom: 45px
-.video-item
-	background-color: $blueColor
-	color: $whiteColor
-	position: relative
-	height: 425px
-	display: flex
-	.video-info,
-	.video-container
-		width: 50%
-	.video-info
-		padding: 0 30px
-		display: flex
-		height: 100%
-	.video-info-container
-		margin: auto
-	h3
-		font-size: $hugeSize
-		color: inherit
-		text-transform: uppercase
-		margin: 0 0 15px
-	.video-text
-		margin: 0 0 30px
-	.btn
-		width: 220px
-.video-container
-	position: relative
-	background-color: $blueColor
-	img
-		@include positionElement(100%,100%)
-		object-fit: cover
-		opacity: 0.7
-.video-btn
-	cursor: pointer
-	span
-		border-radius: 100%
-		@include positionElement(76px, 76px, 50%, 50%)
-		transform: translateX(-50%) translateY(-50%)
-		border: 2px solid $yellowColor
-		transition: ease-out 0.5s
-	i
-		border-radius: 100%
-		@include positionElement(54px, 54px, 50%, 50%)
-		transform: translateX(-50%) translateY(-50%)
-		background-color: $yellowColor
-		@include bgImageEl("/images/icons/play-white.svg", 15px)
-		transition: ease-out 0.5s
-	&:hover
-		span
-			width: 80px
-			height: 80px
-		i
-			width: 50px
-			height: 50px
